@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:providerskeleton/app/app_key.dart';
 import 'package:providerskeleton/core/utils/themes/app_themes.dart';
 import 'package:providerskeleton/meta/view/splash.dart';
 import 'package:providerskeleton/meta/view/themes.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
           ThemeProvider themeProvider = Provider.of<ThemeProvider>(context);
           return MaterialApp(
             debugShowCheckedModeBanner: false,
+            navigatorKey: App.materialKey,
             title: 'Skeleton',
             themeMode: themeProvider.themeMode,
             theme: themeProvider.light,
